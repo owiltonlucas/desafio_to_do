@@ -29,26 +29,22 @@
             
              <button id="button">
                  <img src="src/images/add.svg" class="img" alt=""> Adicionar tarefas
-             </button>
-            
+             </button>   
         </section>
       
         <!--Editar e Adicionar-->
         <div id="menu">
             <div class="menu-content">
-                <div class="nome">
-                    Nome <input type="text" name="nome" id="nome_content">
-                </div>
-
-                <div class="desc">
-                    Descrição (opcional) <textarea name="desc-content" id="desc_content"></textarea>
-                </div>
-            </div>
+                <label class="nome-font" for="nome_content">Nome:</label>
+                <input type="text" name="nome" id="nome_content">
             
-            <button id="fechar">Fechar</button>
-            <button id="salvar">Salvar tarefa</button>
-        </div>
+                <label class="desc-font" for="desc_content">Descrição (opcional):</label>
+                <textarea name="desc-content" id="desc_content"></textarea>
+            </div>
 
+                <button id="fechar">Fechar</button>
+                <button id="salvar">Salvar tarefa</button>
+        </div>
     </main>
 
 <script src="src/javascript/script.js"></script>

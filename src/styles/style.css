@@ -103,13 +103,18 @@ body {
     align-items: center;
 }
 
-.nome {
-    width: Fixed (422px)px;
-    height: Hug (71px)px;
-    top: 340px;
-    left: 183px;
-    gap: 4px;
-    width: 422px;
+.nome-font {
+    width: 53px;
+}
+
+.desc-font {
+    width: 97px;
+}
+
+.nome-font .desc-font {
+    font-size: 16px;
+    line-height: 19.36px;
+    color:#FFFFFF;
     height: 19px;
 }
 
@@ -131,20 +136,6 @@ body {
     gap: 10px;
     border-radius: 8px 0px 0px 0px;
     border: 1px 0px 0px 0px;   
-}
-
-.desc {
-    width: Fixed (422px)px;
-    height: Hug (191px)px;
-    top: 451px;
-    left: 183px;
-    gap: 4px;
-    width: 156px;
-    height: 19px;
-}
-
-#desc_content{
-    height: Fixed (168px)px;
 }
 
 #fechar {
