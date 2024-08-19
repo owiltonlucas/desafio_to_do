@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>ToDoList</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+          <img src="src/images/Logo.svg" alt="">
+        </div>
+    </header>
+
+    <main>
+       <div id="titulo">Tarefas</div>
+       <div class="tarefas">
+            <span class="span-1">Você ainda não criou nenhuma tarefa</span>
+            <span class="span-2">Não se preocupe, suas novas tarefas irão aparecer aqui.</span>
+       </div>
+       
+        <button id="button">
+            <img src="src/images/add.svg" class="img" alt=""> Adicionar tarefas
+        </button>
+
+        <div id="menu">
+            <div class="menu-content">
+                <div class="content-1">
+                    Nome
+                    <input type="text" id="task-name" name="task-name" required>
+                </div>
+
+                <div class="content-2">
+                    Descrição (opcional)
+                    <textarea id="task-desc" name="task-desc"></textarea>
+                </div>
+            </div>
+            
+            <div id="botoes">
+                <button id="fechar">Fechar</button>
+                <button id="salvar">Salvar tarefa</button>
+            </div>
+            
+        </div>
+
+    </main>
+
+<script src="src/javascript/script.js"></script>
+</body>
+</html>
