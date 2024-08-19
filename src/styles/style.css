@@ -85,10 +85,6 @@ main {
 }
 
 #menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 786px;
     height: 982px;
     left: 726px;
@@ -100,48 +96,54 @@ main {
     height: 302px;
     top: 340px;
     left: 183px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.content-1 {
+.nome {
     width: Fixed (422px)px;
     height: Hug (71px)px;
     top: 340px;
     left: 183px;
     gap: 4px;
+    width: 422px;
+    height: 19px;
+}
+
+#nome_content {
+    height: Fixed (48px)px;
+}
+
+#fechar #salvar .nome .desc{
     font-size: 16px;
     line-height: 19.36px;
     color: #FFFFFF;
 }
 
-#task-name {
+#nome_content #desc_content {
     width: Fill (422px)px;
-    height: Fixed (48px)px;
+    background: #35373C;
+    border: 1px solid #535353;
     padding: 10px 16px 10px 16px;
     gap: 10px;
-    border-radius: 8px 8px 8px 8px;
-    background: #35373C;
-    border: 1px solid #535353
+    border-radius: 8px 0px 0px 0px;
+    border: 1px 0px 0px 0px;   
 }
 
-.content-2 {
+.desc {
     width: Fixed (422px)px;
     height: Hug (191px)px;
     top: 451px;
     left: 183px;
     gap: 4px;
-    font-size: 16px;
-    line-height: 19.36px;
-    color: #FFFFFF;
+    width: 156px;
+    height: 19px;
 }
 
-#task-desc {
-    width: Fill (422px)px;
+#desc_content{
     height: Fixed (168px)px;
-    padding: 10px 16px 10px 16px;
-    gap: 10px;
-    border-radius: 8px 8px 8px 8px;
-    background: #35373C;
-    border: 1px solid #535353
 }
 
 #fechar {
@@ -149,11 +151,9 @@ main {
     height: Fixed (56px)px;
     top: 792px;
     left: 324px;
-    padding: 10px 16px 10px 16px;
-    gap: 4px;
-    border-radius: 8px 8px 8px 8px;
-    color: #FFFFFF;
-    background: transparent;
+    background: none;
+    border: none;
+    color: #FFFFFF
 }
 
 #salvar {
@@ -161,8 +161,12 @@ main {
     height: Fixed (56px)px;
     top: 792px;
     left: 441px;
-    padding: 10px 16px 10px 16px;
-    gap: 4px;
-    border-radius: 8px 8px 8px 8px;
     background: #1D46CA;
+    border-radius: 8px;
+}
+
+#fechar #salvar {
+
+    padding: 10px 16px 10px 16px;
+    gap: 4px; 
 }
