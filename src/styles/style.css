@@ -36,6 +36,29 @@ body {
     left: 543px;
     text-align: center;
 }
+
+.tarefa-item {
+    display: flex;
+    width: Fixed (622px)px;
+    height: Hug (320px)px;
+    top: 351px;
+    left: 445px;
+}
+
+.tarefa-item button {
+    margin-left: 10px;
+    padding: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.tarefa-item img {
+    width: 20px;
+    height: 20px;
+}
+
+
 .span-1 {
     width: 426px;
     height: 29px;
@@ -88,12 +111,13 @@ body {
 #menu {
     position: fixed;
     top: 0;
-    right: -50%; 
+    right: 0; 
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
     width: 50%;
     height: 100%;
     background-color: #35373C;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    transition: right 0.3s ease; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -102,7 +126,7 @@ body {
 }
 
 #menu.show {
-    right: 0; /* Mostra o menu */
+    transform: translateX(0%);
 }
 
 .menu-content {
@@ -181,4 +205,33 @@ body {
     justify-content: flex-end;
     margin-bottom: 60px;
     gap: 4px
+}
+
+.task-list {
+    width: Fixed (622px)px;
+    height: Hug (320px)px;
+    top: 351px;
+    left: 445px;
+}
+
+.task-content {
+    width: Fill (622px)px;
+    height: Fixed (80px)px;
+    padding: 16px 24px 16px 24px;
+    gap: 10px;
+    width: 622px;
+    height: 0px;
+    top: 311px;
+    left: 445px;    
+    border-bottom: 1px solid #3C4043
+}
+
+.botton-edit {
+    width: 19px;
+    height: 19px;
+}
+
+.botton-delete {
+    width: 24px;
+    height: 24px;
 }
