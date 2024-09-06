@@ -111,23 +111,24 @@ body {
 #menu {
     position: fixed;
     top: 0;
-    right: 0; 
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    width: 50%;
-    height: 100%;
-    background-color: #35373C;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    right: 0;
+    z-index: 1;
+    width: 50vw;
+    height: 100vh;
+    background: #2B2D31;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
 }
 
-#menu.show {
+
+#menu.opened {
     transform: translateX(0%);
 }
+
 
 .menu-content {
     width: 422px;
@@ -156,7 +157,7 @@ body {
 }
 
 #nome_content {
-    height: Fixed (48px)px;
+    height: 48px;
 }
 
 #fechar, #salvar, .nome, .desc{
@@ -166,13 +167,14 @@ body {
 }
 
 #nome_content, #desc_content {
-    width: Fill (422px)px;
+    width: 422px;
     background: #35373C;
     border: 1px solid #535353;
     padding: 10px 16px 10px 16px;
     gap: 10px;
     border-radius: 8px 0px 0px 0px;
     border: 1px 0px 0px 0px;   
+    color: white;
 }
 
 #fechar {
@@ -185,6 +187,17 @@ body {
     color: #FFFFFF;
 }
 
+#fechar:hover {
+    width: 85px;
+    height: 56px;
+    top: 685px;
+    left: 1676px;
+    padding: 10px 16px 10px 16px;
+    gap: 4px;
+    border-radius: 8px;
+    background: #444444;
+}
+
 #salvar {
     width: 164px;
     height: 56px;
@@ -192,6 +205,10 @@ body {
     left: 441px;
     background: #1D46CA;
     border-radius: 8px;
+}
+
+#salvar:hover{
+    background: #11276E;
 }
 
 #fechar, #salvar {
@@ -208,15 +225,15 @@ body {
 }
 
 .task-list {
-    width: Fixed (622px)px;
-    height: Hug (320px)px;
+    width: 622px;
+    height: 320px;
     top: 351px;
     left: 445px;
 }
 
 .task-content {
-    width: Fill (622px)px;
-    height: Fixed (80px)px;
+    width: 622px;
+    height: 80px;
     padding: 16px 24px 16px 24px;
     gap: 10px;
     width: 622px;

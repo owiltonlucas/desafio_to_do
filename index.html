@@ -20,6 +20,7 @@
     </header>
 
     <main> 
+        <!--Tela empty states-->
         <section id="empty-state"> 
             <div id="titulo">Tarefas</div>
                 <div class="tarefas">
@@ -35,18 +36,18 @@
         <!--Editar e Adicionar-->
         <div id="menu">
             <div class="menu-content">
+
+                <label for="nome">Salvar</label>
+                <input type="text" name="text" id="text_content">
+
                 <label class="nome-font" for="nome_content">Nome:</label>
                 <input type="text" name="nome" id="nome_content">
             
                 <label class="desc-font" for="desc_content">Descrição (opcional):</label>
                 <textarea name="desc-content" id="desc_content"></textarea>
             </div>
-
-            <div class="buttons-content">
                 <button id="fechar">Fechar</button>
-                <button id="salvar">Salvar tarefa</button>
-            </div>    
-            
+                <button id="salvar">Salvar tarefa</button>   
         </div>
 
         <div class="task_list">
@@ -55,6 +56,11 @@
                 <div class="botton-delete"></div>
             </div>
         </div>
+
+        <!--Tela listagem-->
+
+        <!--Tela istagem - hover-->
+
     </main>
 
     <script src="src/javascript/script.js"></script>
