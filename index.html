@@ -35,19 +35,25 @@
       
         <!--Editar e Adicionar-->
         <div id="menu">
-            <div class="menu-content">
+                <button id="closed">
+                    <img src="./src/images/Vector.svg" alt="">
+                </button>
+                
+                <div>
+                    <span>Salvar</span>
+                    <span></span>
+                </div>
 
-                <label for="nome">Salvar</label>
-                <input type="text" name="text" id="text_content">
-
+            <form  action="" class="menu-content">
                 <label class="nome-font" for="nome_content">Nome:</label>
                 <input type="text" name="nome" id="nome_content">
             
                 <label class="desc-font" for="desc_content">Descrição (opcional):</label>
                 <textarea name="desc-content" id="desc_content"></textarea>
-            </div>
+
                 <button id="fechar">Fechar</button>
                 <button id="salvar">Salvar tarefa</button>   
+            </form>
         </div>
 
         <div class="task_list">
