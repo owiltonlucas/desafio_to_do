@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="./src/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,15 +21,16 @@
 
     <main> 
         <!--Tela empty states-->
-        <section id="empty-state"> 
+        <section id="tarefas"> 
             <div id="titulo">Tarefas</div>
-                <div class="tarefas">
+                <div class="empty-state">
                     <span class="span-1">Você ainda não criou nenhuma tarefa</span>
                     <span class="span-2">Não se preocupe, suas novas tarefas irão aparecer aqui.</span>
             </div>
             
              <button id="button">
-                 <img src="src/images/add.svg" class="img" alt=""> Adicionar tarefas
+                 <img src="src/images/add.svg" class="img" alt=""> 
+                 Adicionar tarefas
              </button>   
         </section>
       
@@ -39,13 +40,13 @@
                     <img src="./src/images/Vector.svg" alt="">
                 </button>
                 
-                <div>
+                <div id="desc-salvar">
                     <span>Salvar</span>
                     <span></span>
                 </div>
 
-            <form  action="" class="menu-content">
-                <label class="nome-font" for="nome_content">Nome:</label>
+            <form action="" class="menu-content">
+                <label class="nome-font" for="nome_content">Nome</label>
                 <input type="text" name="nome" id="nome_content">
             
                 <label class="desc-font" for="desc_content">Descrição (opcional):</label>
@@ -56,14 +57,16 @@
             </form>
         </div>
 
-        <div class="task_list">
-            <div class="task_content">
-                <div class="botton-edit"></div>
-                <div class="botton-delete"></div>
+        <!--Tela listagem-->
+
+        <div id="list">
+            <div id="task-list">
+                <input type="checkbox" name="checkbox" id="check">
+                <div id="task-content"></div>
+                <button><img src="" id="button-edit" alt=""></button>
+                <button><img src="" id="button-delete" alt=""></button>
             </div>
         </div>
-
-        <!--Tela listagem-->
 
         <!--Tela istagem - hover-->
 

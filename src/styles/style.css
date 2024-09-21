@@ -8,11 +8,27 @@ body {
     font-family: "Inter";
 }
 
-#empty-state {
+.tarefa-item {
+    display: flex;
+    width: Fixed (622px)px;
+    height: Hug (320px)px;
+    top: 351px;
+    left: 445px;
+}
+
+#tarefas {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.empty-state {
+    width: 426px;
+    height: 50px;
+    margin-top: 50px;
+    left: 543px;
+    text-align: center;
 }
 
 #logo {
@@ -29,21 +45,6 @@ body {
     border-bottom: 1px solid #3C4043
 }
 
-.tarefas {
-    width: 426px;
-    height: 50px;
-    margin-top: 50px;
-    left: 543px;
-    text-align: center;
-}
-
-.tarefa-item {
-    display: flex;
-    width: Fixed (622px)px;
-    height: Hug (320px)px;
-    top: 351px;
-    left: 445px;
-}
 
 .tarefa-item button {
     margin-left: 10px;
@@ -129,7 +130,6 @@ body {
     transform: translateX(0%);
 }
 
-
 .menu-content {
     width: 422px;
     height: 302px;
@@ -138,43 +138,64 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .nome-font {
     width: 53px;
-}
-
-.desc-font {
-    width: 97px;
-}
-
-.nome-font .desc-font {
     font-size: 16px;
     line-height: 19.36px;
     color:#FFFFFF;
     height: 19px;
 }
 
-#nome_content {
-    height: 48px;
+#desc-salvar {
+    width: 499px;
+    height: 56px;
+    top: 204px;
+    left: 182px;
+    gap: 8px;
 }
 
-#fechar, #salvar, .nome, .desc{
+#closed {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    width: 20px;
+    height: 20px;
+    top: 6px;
+    right : 6px;
+    background: #F5F5F5;
+}
+
+.desc-font {
     font-size: 16px;
+    font-weight: 400;
     line-height: 19.36px;
-    color: #FFFFFF;
+    text-align: left;
 }
 
-#nome_content, #desc_content {
+#desc_content {
     width: 422px;
-    background: #35373C;
-    border: 1px solid #535353;
+    height: 168px;
     padding: 10px 16px 10px 16px;
     gap: 10px;
-    border-radius: 8px 0px 0px 0px;
-    border: 1px 0px 0px 0px;   
-    color: white;
+    border-radius: 8px;
+    border: 1px;
+    background: #35373C;
+    border: 1px solid #535353
+}
+
+
+#nome_content {
+    width: 422px;
+    height: 48px;
+    padding: 10px 16px 10px 16px;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px;
+    background: #35373C;
+    border: 1px solid #535353
 }
 
 #fechar {
@@ -182,9 +203,13 @@ body {
     height: 56px;
     top: 792px;
     left: 324px;
-    background: none;
-    border: none;
-    color: #FFFFFF;
+    padding: 10px 16px 10px 16px;
+    gap: 4px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    text-align: left;
 }
 
 #fechar:hover {
@@ -203,19 +228,21 @@ body {
     height: 56px;
     top: 792px;
     left: 441px;
-    background: #1D46CA;
+    padding: 10px 16px 10px 16px;
+    gap: 4px;
     border-radius: 8px;
+    background: #1D46CA;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    text-align: left;
+    background: #FFFFFF;
 }
 
 #salvar:hover{
     background: #11276E;
 }
 
-#fechar, #salvar {
-    padding: 10px 16px 10px 16px;
-    gap: 4px; 
-    cursor: pointer;
-}
 
 .buttons-content {
     display: flex;
@@ -251,4 +278,45 @@ body {
 .botton-delete {
     width: 24px;
     height: 24px;
+}
+
+#list {
+    width: 622px;
+    height: 320px;
+    top: 351px;
+    left: 445px;
+}
+
+#task-list {
+    width: 622px;
+    height: 80px;
+    padding: 16px 24px 16px 24px;
+    gap: 10px;
+}
+
+#check {
+    width: 32px;
+    height: 32px;
+}
+
+#task-content {
+    width: 310px;
+    height: 38px;
+    gap: 4px;
+}
+
+#button-edit {
+    width: 19px;
+    height: 19px;
+}
+
+#button-delete {
+    width: 24px;
+    height: 24px;
+   
+}
+
+#button-edit,
+#button-delete {
+    border: 1.5px solid #989898;
 }
