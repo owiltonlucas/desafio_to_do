@@ -154,6 +154,7 @@ body {
     top: 204px;
     left: 182px;
     gap: 8px;
+    color: #BDBDBD;
 }
 
 #closed {
@@ -201,8 +202,8 @@ body {
 #fechar {
     width: 85px;
     height: 56px;
-    top: 792px;
-    left: 324px;
+    top: 292px;
+    left: 1676px;
     padding: 10px 16px 10px 16px;
     gap: 4px;
     border-radius: 8px;
@@ -210,6 +211,7 @@ body {
     font-weight: 500;
     line-height: 19.36px;
     text-align: left;
+    color: #FFFFFF;
 }
 
 #fechar:hover {
@@ -221,6 +223,11 @@ body {
     gap: 4px;
     border-radius: 8px;
     background: #444444;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    text-align: left;
+    color: #FFFFFF;
 }
 
 #salvar {
@@ -235,8 +242,8 @@ body {
     font-size: 16px;
     font-weight: 500;
     line-height: 19.36px;
-    text-align: left;
-    background: #FFFFFF;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 #salvar:hover{
@@ -244,10 +251,10 @@ body {
 }
 
 
-.buttons-content {
+#buttons-style {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 60px;
+   
     gap: 4px
 }
 
