@@ -211,7 +211,7 @@ body {
     font-weight: 500;
     line-height: 19.36px;
     text-align: left;
-    color: #FFFFFF;
+    
 }
 
 #fechar:hover {
@@ -254,7 +254,6 @@ body {
 #buttons-style {
     display: flex;
     justify-content: flex-end;
-   
     gap: 4px
 }
 

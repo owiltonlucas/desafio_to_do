@@ -26,9 +26,9 @@
                 <div class="empty-state">
                     <span class="span-1">Você ainda não criou nenhuma tarefa</span>
                     <span class="span-2">Não se preocupe, suas novas tarefas irão aparecer aqui.</span>
-            </div>
+                </div>
             
-             <button id="button">
+             <button id="button" onclick="openForm()">
                  <img src="src/images/add.svg" class="img" alt=""> 
                  Adicionar tarefas
              </button>   
@@ -45,7 +45,7 @@
                     <span></span>
                 </div>
 
-            <form action="" class="menu-content">
+            <div class="menu-content">
                 <label class="nome-font" for="nome_content">Nome</label>
                 <input type="text" name="nome" id="nome_content">
             
@@ -53,10 +53,10 @@
                 <textarea name="desc-content" id="desc_content"></textarea>
 
                 <div id="buttons-style">
-                    <button id="fechar">Fechar</button>
-                    <button id="salvar">Salvar tarefa</button>   
+                    <button id="fechar" onclick="closeForm()">Fechar</button>
+                    <button id="salvar" onclick="salvarTask()">Salvar tarefa</button>   
                 </div>
-            </form>
+            </div>
         </div>
 
         <!--Tela listagem-->
