@@ -27,7 +27,7 @@ function salvarTask() {
     const descricao = desc.value;
     let idAleatorio;
     do {
-        idAleatorio = Date.now()
+        idAleatorio = Date.now();
     } while (usedIds.has(idAleatorio)); 
 
     usedIds.add(idAleatorio);
@@ -41,16 +41,23 @@ function salvarTask() {
 
     arrayObject.push(objetoTarefa)
 
-    arrayObject.forEach(function(item) {
-        console.log(item)
+    const emptyStateContainer = document.querySelector('.empty-state-container'); 
 
-        if (arrayObject.lenght === 0) {
-            emptystate.style.display = 'block'
-        } else {
-            emptystate.style.display = 'none';
-            const itemLista = document.createElement('li');
-            itemLista.textContent = item;
-            appendChild(itemLista);
-        }
-    })
+    if (arrayObject.length === 0) {
+        emptyStateContainer.style.display = 'block';
+    } else {
+        emptyStateContainer.style.display = 'none';         
+        
+        emptyStateContainer.innerHTML = '';
+
+        const taskList = document.createElement('ul');
+        arrayObject.forEach(function(item) {
+            const itemLista = document.createElement('li'); 
+            itemLista.textContent = `${item.name} - ${item.descricao}`;
+            taskList.appendChild(itemLista);
+        });
+
+        emptyStateContainer.appendChild(taskList); 
+        emptyStateContainer.style.display = 'block'; 
+    }
 }
