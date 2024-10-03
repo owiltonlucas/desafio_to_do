@@ -19,6 +19,10 @@ function closeForm() {
     menu.classList.remove("opened");
 }
 
+function closeFormButton() {
+    menu.classList.remove("opened");
+}
+
 let arrayObject = []
 let usedIds = new Set(); 
 
