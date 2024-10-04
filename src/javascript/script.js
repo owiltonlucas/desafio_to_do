@@ -29,6 +29,11 @@ let usedIds = new Set();
 function salvarTask() {
     const name = nome.value;
     const descricao = desc.value;
+
+    if (name === null || name === ''){
+        return;
+    }
+
     let idAleatorio;
     do {
         idAleatorio = Date.now();
@@ -51,17 +56,51 @@ function salvarTask() {
         emptyStateContainer.style.display = 'block';
     } else {
         emptyStateContainer.style.display = 'none';         
-        
         emptyStateContainer.innerHTML = '';
 
-        const taskList = document.createElement('ul');
-        arrayObject.forEach(function(item) {
-            const itemLista = document.createElement('li'); 
-            itemLista.textContent = `${item.name} - ${item.descricao}`;
-            taskList.appendChild(itemLista);
-        });
+       
+        arrayObject.forEach(function(item, index) {
+        
+        const taskContainer = document.createElement('div');
+        taskContainer.classList.add('task-container');
 
-        emptyStateContainer.appendChild(taskList); 
-        emptyStateContainer.style.display = 'block'; 
-    }
+       
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = item.selected;
+        checkbox.onchange = function () {
+            item.selected = checkbox.checked; // Marca ou desmarca a tarefa
+        };
+
+       
+        const taskText = document.createElement('span');
+        taskText.textContent = `${item.name} ${item.descricao}`;
+
+
+        const editButton = document.createElement('button');
+        editButton.innerHTML = `<img src="./src/images/edit.svg">`;
+        editButton.onclick = function () {
+            editarTask(index); 
+        };
+
+        const deleteButton = document.createElement('button');
+        deleteButton.innerHTML = `<img src="./src/images/delete.svg">`;
+        deleteButton.onclick = function () {
+            deletarTask(index); 
+        };
+
+        taskContainer.appendChild(checkbox);
+        taskContainer.appendChild(taskText);
+        taskContainer.appendChild(editButton);
+        taskContainer.appendChild(deleteButton);
+
+      
+        emptyStateContainer.appendChild(taskContainer);
+    });
+
+    emptyStateContainer.style.display = 'block';
+}
+    closeForm();
+    nome.value = '';
+    desc.value = '';
 }
