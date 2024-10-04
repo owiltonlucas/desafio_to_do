@@ -159,14 +159,10 @@ body {
 
 #closed {
     position: absolute;
-    width: 32px;
-    height: 32px;
-    padding: 6px;
-    width: 20px;
-    height: 20px;
     top: 6px;
     right : 6px;
-    background: #F5F5F5;
+    background: none;
+    border: none;
 }
 
 .desc-font {
