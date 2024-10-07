@@ -11,6 +11,10 @@ const editar = document.getElementById('button-edit');
 const deletar = document.getElementById('button-delete');
 const emptystate = document.querySelector('.empty-state')
 
+// Inicialização do array para armazenar as tarefas
+let arrayObject = [];
+let usedIds = new Set();
+
 function openForm() {
     menu.classList.add("opened")
 }
@@ -23,8 +27,18 @@ function closeFormButton() {
     menu.classList.remove("opened");
 }
 
-let arrayObject = [];
-let usedIds = new Set();
+// Função para salvar as tarefas no localStorage
+function saveToLocalStorage() {
+    localStorage.setItem('tasks', JSON.stringify(arrayObject));
+}
+
+// Função para carregar as tarefas do localStorage
+function loadFromLocalStorage() {
+    const savedTasks = localStorage.getItem('tasks');
+    if (savedTasks) {
+        arrayObject = JSON.parse(savedTasks);
+    }
+}
 
 function salvarTask() {
     const name = nome.value;
@@ -50,8 +64,10 @@ function salvarTask() {
 
     arrayObject.push(objetoTarefa);
 
-    renderTasks();
+    // Salva no localStorage após adicionar a tarefa
+    saveToLocalStorage();
 
+    renderTasks();
     closeForm();
     nome.value = '';
     desc.value = '';
@@ -59,51 +75,49 @@ function salvarTask() {
 
 // Adicione as funções abaixo de salvarTask
 
-// Função para editar a tarefa
 function editarTask(index) {
     const tarefa = arrayObject[index];
 
-    // Preenche os campos com os dados da tarefa
     nome.value = tarefa.name;
     desc.value = tarefa.descricao;
 
-    // Abre o formulário lateral
     openForm();
 
-    // Atualiza a tarefa após clicar em salvar
     salvar.onclick = function () {
         const novoNome = nome.value;
         const novaDescricao = desc.value;
 
-        // Verifica se o nome não está vazio
         if (novoNome === null || novoNome === '') {
             return;
         }
 
-        // Atualiza os dados da tarefa no array
         arrayObject[index].name = novoNome;
         arrayObject[index].descricao = novaDescricao;
 
-        // Atualiza a exibição
-        renderTasks();
+        // Salva no localStorage após editar a tarefa
+        saveToLocalStorage();
 
-        // Fecha o formulário e limpa os campos
+        renderTasks();
         closeForm();
         nome.value = '';
         desc.value = '';
+
+        salvar.onclick = salvarTask;
     };
 }
 
-// Função para deletar a tarefa
 function deletarTask(index) {
-    // Remove a tarefa do array
     arrayObject.splice(index, 1);
 
-    // Atualiza a exibição
+    // Salva no localStorage após deletar a tarefa
+    saveToLocalStorage();
+
     renderTasks();
+    salvar.onclick = salvarTask;
 }
 
-// Função para renderizar as tarefas
+
+
 // Função para renderizar as tarefas
 function renderTasks() {
     const emptyStateContainer = document.querySelector('.empty-state-container'); 
@@ -116,9 +130,9 @@ function renderTasks() {
         emptyStateContainer.style.display = 'block';
         emptyStateContainer.innerHTML = '<span class="span-1">Você ainda não criou nenhuma tarefa</span></br><span class="span-2">Não se preocupe, suas novas tarefas irão aparecer aqui.</span>';
     } else {
-        emptyStateContainer.style.display = 'none';
+        emptyStateContainer.style.display = 'block';
 
-        arrayObject.forEach(function(item, index) { 
+        arrayObject.forEach(function(item, index) {
             const taskContainer = document.createElement('div');
             taskContainer.classList.add('task-container');
 
@@ -127,6 +141,8 @@ function renderTasks() {
             checkbox.checked = item.selected;
             checkbox.onchange = function () {
                 item.selected = checkbox.checked;
+                // Atualiza o localStorage quando o checkbox é alterado
+                saveToLocalStorage();
             };
 
             const taskText = document.createElement('span');
@@ -151,7 +167,10 @@ function renderTasks() {
 
             emptyStateContainer.appendChild(taskContainer);
         });
-
-        emptyStateContainer.style.display = 'block';
     }
 }
+// Carrega as tarefas do localStorage ao iniciar a página
+window.onload = function() {
+    loadFromLocalStorage();
+    renderTasks();
+};
