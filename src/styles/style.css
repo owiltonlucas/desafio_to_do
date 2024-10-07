@@ -131,7 +131,6 @@ body {
 }
 
 .menu-content {
-    width: 422px;
     height: 302px;
     top: 340px;
     left: 183px;
@@ -149,7 +148,7 @@ body {
 }
 
 #desc-salvar {
-    width: 499px;
+    width: 478px;
     height: 56px;
     top: 204px;
     left: 182px;
@@ -180,8 +179,10 @@ body {
     border-radius: 8px;
     border: 1px;
     background: #35373C;
-    border: 1px solid #535353
+    border: 1px solid #535353;
+    color:#FFFFFF;
 }
+
 
 
 #nome_content {
@@ -192,7 +193,8 @@ body {
     border-radius: 8px;
     border: 1px;
     background: #35373C;
-    border: 1px solid #535353
+    border: 1px solid #535353;
+    color:#FFFFFF;
 }
 
 #fechar {
