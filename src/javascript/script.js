@@ -104,8 +104,12 @@ function deletarTask(index) {
 }
 
 // Função para renderizar as tarefas
+// Função para renderizar as tarefas
 function renderTasks() {
     const emptyStateContainer = document.querySelector('.empty-state-container'); 
+
+    // Limpa o container antes de adicionar novas tarefas
+    emptyStateContainer.innerHTML = '';
 
     // Verifica se o array está vazio
     if (arrayObject.length === 0) {
@@ -113,7 +117,6 @@ function renderTasks() {
         emptyStateContainer.innerHTML = '<span class="span-1">Você ainda não criou nenhuma tarefa</span></br><span class="span-2">Não se preocupe, suas novas tarefas irão aparecer aqui.</span>';
     } else {
         emptyStateContainer.style.display = 'none';
-        emptyStateContainer.innerHTML = '';
 
         arrayObject.forEach(function(item, index) { 
             const taskContainer = document.createElement('div');
