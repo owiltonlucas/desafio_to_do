@@ -117,7 +117,6 @@ function deletarTask(index) {
 }
 
 
-
 // Função para renderizar as tarefas
 function renderTasks() {
     const emptyStateContainer = document.querySelector('.empty-state-container'); 

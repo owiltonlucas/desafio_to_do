@@ -323,3 +323,37 @@ body {
 #button-delete {
     border: 1.5px solid #989898;
 }
+
+.task-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.task-container input[type="checkbox"] {
+    background-color: #FFFFFF;
+}
+
+.task-container span {
+    font-size: 16px;
+    margin-left: 10px; 
+}
+
+.task-container .buttons {
+    display: flex;
+    gap: 5px; 
+}
+
+.task-container button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.task-container button img {
+    width: 20px;
+    height: 20px;
+}
