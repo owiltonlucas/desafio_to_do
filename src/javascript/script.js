@@ -11,7 +11,6 @@ const editar = document.getElementById('button-edit');
 const deletar = document.getElementById('button-delete');
 const emptystate = document.querySelector('.empty-state')
 
-// Inicialização do array para armazenar as tarefas
 let arrayObject = [];
 let usedIds = new Set();
 
@@ -27,12 +26,10 @@ function closeFormButton() {
     menu.classList.remove("opened");
 }
 
-// Função para salvar as tarefas no localStorage
 function saveToLocalStorage() {
     localStorage.setItem('tasks', JSON.stringify(arrayObject));
 }
 
-// Função para carregar as tarefas do localStorage
 function loadFromLocalStorage() {
     const savedTasks = localStorage.getItem('tasks');
     if (savedTasks) {
@@ -64,7 +61,6 @@ function salvarTask() {
 
     arrayObject.push(objetoTarefa);
 
-    // Salva no localStorage após adicionar a tarefa
     saveToLocalStorage();
 
     renderTasks();
@@ -72,8 +68,6 @@ function salvarTask() {
     nome.value = '';
     desc.value = '';
 }
-
-// Adicione as funções abaixo de salvarTask
 
 function editarTask(index) {
     const tarefa = arrayObject[index];
@@ -94,7 +88,6 @@ function editarTask(index) {
         arrayObject[index].name = novoNome;
         arrayObject[index].descricao = novaDescricao;
 
-        // Salva no localStorage após editar a tarefa
         saveToLocalStorage();
 
         renderTasks();
@@ -109,7 +102,6 @@ function editarTask(index) {
 function deletarTask(index) {
     arrayObject.splice(index, 1);
 
-    // Salva no localStorage após deletar a tarefa
     saveToLocalStorage();
 
     renderTasks();
@@ -117,14 +109,11 @@ function deletarTask(index) {
 }
 
 
-// Função para renderizar as tarefas
 function renderTasks() {
     const emptyStateContainer = document.querySelector('.empty-state-container'); 
 
-    // Limpa o container antes de adicionar novas tarefas
     emptyStateContainer.innerHTML = '';
-
-    // Verifica se o array está vazio
+    
     if (arrayObject.length === 0) {
         emptyStateContainer.style.display = 'block';
         emptyStateContainer.innerHTML = '<span class="span-1">Você ainda não criou nenhuma tarefa</span></br><span class="span-2">Não se preocupe, suas novas tarefas irão aparecer aqui.</span>';
@@ -132,6 +121,7 @@ function renderTasks() {
         emptyStateContainer.style.display = 'block';
 
         arrayObject.forEach(function(item, index) {
+            console.log(index);
             const taskContainer = document.createElement('div');
             taskContainer.classList.add('task-container');
 
@@ -140,7 +130,7 @@ function renderTasks() {
             checkbox.checked = item.selected;
             checkbox.onchange = function () {
                 item.selected = checkbox.checked;
-                // Atualiza o localStorage quando o checkbox é alterado
+                
                 saveToLocalStorage();
             };
 
@@ -168,7 +158,7 @@ function renderTasks() {
         });
     }
 }
-// Carrega as tarefas do localStorage ao iniciar a página
+
 window.onload = function() {
     loadFromLocalStorage();
     renderTasks();
