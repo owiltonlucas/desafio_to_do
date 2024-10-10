@@ -47,21 +47,22 @@
                     <span>Salvar</span>
                 </div>
 
-                <label class="nome-font" for="nome_content">Nome</label>
-                <input type="text" name="nome" id="nome-content">
+                <div id="input-name">
+                    <label class="nome-font" for="nome_content">Nome</label>
+                    <input type="text" name="nome" id="nome-content">
+                </div>
             
-                <label class="desc-font" for="desc_content">Descrição (opcional):</label>
-                <textarea name="desc-content" id="desc-content"></textarea>
+                <div id="textarea-desc">
+                    <label class="desc-font" for="desc_content">Descrição (opcional):</label>
+                    <textarea name="desc-content" id="desc-content"></textarea>
+                </div>
 
                 <div id="buttons-style">
                     <button id="fechar" onclick="closeForm()">Fechar</button>
                     <button id="salvar" onclick="salvarTask()">Salvar tarefa</button>   
                 </div>
-
-            </div>
-           
+            </div> 
         </div>
-
     </main>
 
     <script src="src/javascript/script.js"></script>

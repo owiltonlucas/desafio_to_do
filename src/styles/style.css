@@ -137,6 +137,17 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 32px;
+}
+
+#input-name{
+    display: flex;
+    flex-direction: column;
+}
+
+#textarea-desc{
+    display: flex;
+    flex-direction: column;
 }
 
 .nome-font {
