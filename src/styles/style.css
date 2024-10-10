@@ -171,8 +171,7 @@ body {
     text-align: left;
 }
 
-#desc_content {
-    width: 422px;
+#desc-content {
     height: 168px;
     padding: 10px 16px 10px 16px;
     gap: 10px;
@@ -184,8 +183,7 @@ body {
 }
 
 
-#nome_content {
-    width: 422px;
+#nome-content {
     height: 48px;
     padding: 10px 16px 10px 16px;
     gap: 10px;
@@ -203,12 +201,13 @@ body {
     left: 1676px;
     padding: 10px 16px 10px 16px;
     gap: 4px;
-    border-radius: 8px;
+    border: none;
     font-size: 16px;
     font-weight: 500;
     line-height: 19.36px;
     text-align: left;
-    
+    background-color: #2B2D31;
+    color:#FFFFFF
 }
 
 #fechar:hover {
@@ -224,7 +223,7 @@ body {
     font-weight: 500;
     line-height: 19.36px;
     text-align: left;
-    color: #FFFFFF;
+    cursor: pointer
 }
 
 #salvar {
@@ -245,13 +244,14 @@ body {
 
 #salvar:hover{
     background: #11276E;
+    cursor: pointer;
 }
-
 
 #buttons-style {
     display: flex;
+    gap: 4px;
     justify-content: flex-end;
-    gap: 4px
+    margin-top: auto;
 }
 
 .task-list {
