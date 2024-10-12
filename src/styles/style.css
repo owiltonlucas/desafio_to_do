@@ -265,82 +265,19 @@ body {
     margin-top: auto;
 }
 
-.task-list {
-    width: 622px;
-    height: 320px;
-    top: 351px;
-    left: 445px;
-}
-
-.task-content {
-    width: 622px;
-    height: 80px;
-    padding: 16px 24px 16px 24px;
-    gap: 10px;
-    width: 622px;
-    height: 0px;
-    top: 311px;
-    left: 445px;    
-    border-bottom: 1px solid #3C4043
-}
-
-.botton-edit {
-    width: 19px;
-    height: 19px;
-}
-
-.botton-delete {
-    width: 24px;
-    height: 24px;
-}
-
-#list {
-    width: 622px;
-    height: 320px;
-    top: 351px;
-    left: 445px;
-}
-
-#task-list {
-    width: 622px;
-    height: 80px;
-    padding: 16px 24px 16px 24px;
-    gap: 10px;
-}
-
-#check {
-    width: 32px;
-    height: 32px;
-}
-
-#task-content {
-    width: 310px;
-    height: 38px;
-    gap: 4px;
-}
-
-#button-edit {
-    width: 19px;
-    height: 19px;
-}
-
-#button-delete {
-    width: 24px;
-    height: 24px;
-   
-}
-
-#button-edit,
-#button-delete {
-    border: 1.5px solid #989898;
-}
-
 .task-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    padding: 10px;
-    margin-bottom: 10px;
+    justify-content: space-around; 
+    width: 622px;
+    height: 80px;
+    gap: 10px;
+    top: 351px;
+    left: 445px;   
+}
+
+.task-container:hover {
+    background: #35373C;
 }
 
 .task-container input[type="checkbox"] {
@@ -348,6 +285,7 @@ body {
 }
 
 .task-container span {
+    width: 310px;
     font-size: 16px;
     margin-left: 10px; 
 }
@@ -362,6 +300,7 @@ body {
     border: none;
     cursor: pointer;
     padding: 5px;
+    gap: 10px;
 }
 
 .task-container button img {
