@@ -11,7 +11,6 @@ let usedIds = new Set();
 
 function openForm() {
     menu.classList.add("opened");
-    salvar.onclick = salvarTask;
 }
 
 function closeForm() {
@@ -97,9 +96,7 @@ function editarTask(index) {
 
 function deletarTask(index) {
     arrayObject.splice(index, 1);
-
     saveToLocalStorage();
-
     renderTasks();
     salvar.onclick = salvarTask;
 }
