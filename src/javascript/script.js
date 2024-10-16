@@ -127,7 +127,6 @@ function renderTasks() {
             const taskContainer = document.createElement('div');
             taskContainer.classList.add('task-container');
 
-            // Div para o checkbox
             const checkboxContainer = document.createElement('div');
             checkboxContainer.classList.add('checkbox-container');
             
@@ -140,7 +139,6 @@ function renderTasks() {
             };
             checkboxContainer.appendChild(checkbox);
 
-            // Div para o nome e descrição
             const taskInfoContainer = document.createElement('div');
             taskInfoContainer.classList.add('task-info-container');
             
@@ -155,7 +153,7 @@ function renderTasks() {
             taskInfoContainer.appendChild(taskName);
             taskInfoContainer.appendChild(taskDescription);
 
-            // Div para os botões de editar e deletar
+            
             const buttonsContainer = document.createElement('div');
             buttonsContainer.classList.add('buttons-container');
             
@@ -176,7 +174,6 @@ function renderTasks() {
             buttonsContainer.appendChild(editButton);
             buttonsContainer.appendChild(deleteButton);
 
-            // Adicionando as divs ao taskContainer
             taskContainer.appendChild(checkboxContainer);
             taskContainer.appendChild(taskInfoContainer);
             taskContainer.appendChild(buttonsContainer);
