@@ -109,53 +109,77 @@ function deletarTask(index) {
     saveToLocalStorage();
     renderTasks();
     salvar.onclick = salvarTask;
+    nome.value = '';
+    desc.value = '';
 }
-
 
 function renderTasks() {
     const emptyStateContainer = document.querySelector('.empty-state-container'); 
-
     emptyStateContainer.innerHTML = '';
     
     if (arrayObject.length === 0) {
         emptyStateContainer.style.display = 'block';
-        emptyStateContainer.innerHTML = '<span class="span-1">Você ainda não criou nenhuma tarefa</span></br><span class="span-2">Não se preocupe, suas novas tarefas irão aparecer aqui.</span>';
+        emptyStateContainer.innerHTML = '<div class="empty_state_new"><span class="span_1">Você ainda não criou nenhuma tarefa</span><br><span class="span_2">Não se preocupe, suas novas tarefas irão aparecer aqui.</span></div>';
     } else {
         emptyStateContainer.style.display = 'block';
-
         arrayObject.forEach(function(item, index) {
             console.log(index);
             const taskContainer = document.createElement('div');
             taskContainer.classList.add('task-container');
 
+            // Div para o checkbox
+            const checkboxContainer = document.createElement('div');
+            checkboxContainer.classList.add('checkbox-container');
+            
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
             checkbox.checked = item.selected;
             checkbox.onchange = function () {
                 item.selected = checkbox.checked;
-                
                 saveToLocalStorage();
             };
+            checkboxContainer.appendChild(checkbox);
 
-            const taskText = document.createElement('span');
-            taskText.textContent = `${item.name} ${item.descricao}`;
+            // Div para o nome e descrição
+            const taskInfoContainer = document.createElement('div');
+            taskInfoContainer.classList.add('task-info-container');
+            
+            const taskName = document.createElement('span');
+            taskName.textContent = item.name;
+            taskName.classList.add('task-name');
+            
+            const taskDescription = document.createElement('span');
+            taskDescription.textContent = item.descricao;
+            taskDescription.classList.add('task-descricao');
+            
+            taskInfoContainer.appendChild(taskName);
+            taskInfoContainer.appendChild(taskDescription);
 
+            // Div para os botões de editar e deletar
+            const buttonsContainer = document.createElement('div');
+            buttonsContainer.classList.add('buttons-container');
+            
             const editButton = document.createElement('button');
+            editButton.classList.add('button-1')
             editButton.innerHTML = `<img src="./src/images/edit.svg">`;
             editButton.onclick = function () {
                 editarTask(index);
             };
-
+            
             const deleteButton = document.createElement('button');
+            deleteButton.classList.add('button-2')
             deleteButton.innerHTML = `<img src="./src/images/delete.svg">`;
             deleteButton.onclick = function () {
                 deletarTask(index);
             };
 
-            taskContainer.appendChild(checkbox);
-            taskContainer.appendChild(taskText);
-            taskContainer.appendChild(editButton);
-            taskContainer.appendChild(deleteButton);
+            buttonsContainer.appendChild(editButton);
+            buttonsContainer.appendChild(deleteButton);
+
+            // Adicionando as divs ao taskContainer
+            taskContainer.appendChild(checkboxContainer);
+            taskContainer.appendChild(taskInfoContainer);
+            taskContainer.appendChild(buttonsContainer);
 
             emptyStateContainer.appendChild(taskContainer);
         });
