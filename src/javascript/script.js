@@ -9,16 +9,27 @@ const emptystateContainer = document.querySelector('.empty-state-container');
 let arrayObject = [];
 let usedIds = new Set();
 
+function alterColor(){
+    document.body.style.backgroundColor = "#000000";
+}
+
+function originColor() {
+    document.body.style.backgroundColor = "#2B2D31";
+}
+
 function openForm() {
     menu.classList.add("opened");
+    alterColor();
 }
 
 function closeForm() {
     menu.classList.remove("opened");
+    originColor();
 }
 
 function closeFormButton() {
     menu.classList.remove("opened");
+    originColor();
 }
 
 function saveToLocalStorage() {
@@ -57,9 +68,9 @@ function salvarTask() {
     arrayObject.push(objetoTarefa);
 
     saveToLocalStorage();
-
     renderTasks();
     closeForm();
+    originColor();
     nome.value = '';
     desc.value = '';
 }
@@ -89,7 +100,6 @@ function editarTask(index) {
         closeForm();
         nome.value = '';
         desc.value = '';
-
         salvar.onclick = salvarTask;
     };
 }
