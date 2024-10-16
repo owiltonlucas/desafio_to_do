@@ -118,10 +118,8 @@ function renderTasks() {
     emptyStateContainer.innerHTML = '';
     
     if (arrayObject.length === 0) {
-        emptyStateContainer.style.display = 'block';
         emptyStateContainer.innerHTML = '<div class="empty_state_new"><span class="span_1">Você ainda não criou nenhuma tarefa</span><br><span class="span_2">Não se preocupe, suas novas tarefas irão aparecer aqui.</span></div>';
     } else {
-        emptyStateContainer.style.display = 'block';
         arrayObject.forEach(function(item, index) {
             console.log(index);
             const taskContainer = document.createElement('div');
