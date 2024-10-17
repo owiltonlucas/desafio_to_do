@@ -10,7 +10,8 @@ let arrayObject = [];
 let usedIds = new Set();
 
 function alterColor(){
-    document.body.style.backgroundColor = "#000000";
+    document.body.style.background = "rgba(43, 43, 43, 0.55)"; 
+    document.body.style.backdropFilter = "blur(2px)";
 }
 
 function originColor() {
