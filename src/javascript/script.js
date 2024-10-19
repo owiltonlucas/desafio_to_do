@@ -11,7 +11,7 @@ let usedIds = new Set();
 
 function alterColor(){
     document.body.style.background = "rgba(0, 0, 0, 0.9)"; 
-    document.body.style.backdropFilter = "blur(6px)";
+    //document.body.style.backdropFilter = "blur(6px)";
 }
 
 function originColor() {
