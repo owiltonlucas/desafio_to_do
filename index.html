@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,32 @@
     />
     <title>ToDoList</title>
 </head>
+
+
+        <!--Editar e Adicionar-->
+        <div id="menu">
+            <button id="closed" onclick="closeFormButton()">
+                <img src="./src/images/Vector.svg" alt="">
+            </button>
+            
+        <div class="menu-content">
+            <div id="input-name">
+                <label class="nome-font" for="nome_content">Nome</label>
+                <input type="text" name="nome" id="nome-content">
+            </div>
+        
+            <div id="textarea-desc">
+                <label class="desc-font" for="desc_content">Descrição (opcional):</label>
+                <textarea name="desc-content" id="desc-content"></textarea>
+            </div>
+
+            <div id="buttons-style">
+                <button id="fechar" onclick="closeForm()">Fechar</button>
+                <button id="salvar" onclick="salvarTask()">Salvar tarefa</button>   
+            </div>
+        </div> 
+    </div>
+
 <body>
     <header>
         <div id="logo">
@@ -40,30 +67,6 @@
         </section>
     </main>
       
-        <!--Editar e Adicionar-->
-        <div id="menu">
-                <button id="closed" onclick="closeFormButton()">
-                    <img src="./src/images/Vector.svg" alt="">
-                </button>
-                
-            <div class="menu-content">
-                <div id="input-name">
-                    <label class="nome-font" for="nome_content">Nome</label>
-                    <input type="text" name="nome" id="nome-content">
-                </div>
-            
-                <div id="textarea-desc">
-                    <label class="desc-font" for="desc_content">Descrição (opcional):</label>
-                    <textarea name="desc-content" id="desc-content"></textarea>
-                </div>
-
-                <div id="buttons-style">
-                    <button id="fechar" onclick="closeForm()">Fechar</button>
-                    <button id="salvar" onclick="salvarTask()">Salvar tarefa</button>   
-                </div>
-            </div> 
-        </div>
-
     <script src="src/javascript/script.js"></script>
 </body>
 </html>
