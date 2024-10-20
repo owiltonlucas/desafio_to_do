@@ -76,12 +76,11 @@ function salvarTask() {
 }
 
 function editarTask(index) {
+    openForm();
     const tarefa = arrayObject[index];
 
     nome.value = tarefa.name;
     desc.value = tarefa.descricao;
-
-    openForm();
 
     salvar.onclick = function () {
         const novoNome = nome.value;
@@ -108,7 +107,6 @@ function deletarTask(index) {
     arrayObject.splice(index, 1);
     saveToLocalStorage();
     renderTasks();
-    salvar.onclick = salvarTask;
     nome.value = '';
     desc.value = '';
 }
