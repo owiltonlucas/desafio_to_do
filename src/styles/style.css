@@ -21,7 +21,6 @@ body {
     width: 426px;
     height: 50px;
     margin-top: 50px;
-    left: 543px;
     text-align: center;
 }
 
@@ -34,42 +33,30 @@ body {
     height: 51px;
     font-size: 24px;
     margin-top: 76px;
-    left: 449px;
     border: 1px;
     border-bottom: 1px solid #3C4043
 }
 
 .span-1 {
-    width: 426px;
-    height: 29px;
     font-size: 24px;
-    margin-top: 55px;
-    left: 543px;
     color: #FFFFFF;
 }
 
 .span-2 {
-    width: 372px;
-    height: 17px;
     font-size: 14px;
-    top: 540px;
-    left: 570px;
     color: #BDBDBD;
 }
 
 #button {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 622px;
     height: 79px;
     margin-top: 32px;
-    left: 445px;
     padding: 10px 16px 10px 16px;
     gap: 4px;
     border-radius: 8px 8px 8px 8px;
-    border: 2px;
     border: 2px dashed #989898;
     background-color: transparent;
     color:#989898;
@@ -102,8 +89,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease;
     transform: translateX(100%);
+    transition: transform 0.3s ease;
 }
 
 #menu.opened {
@@ -181,42 +168,26 @@ body {
 #fechar {
     width: 85px;
     height: 56px;
-    top: 292px;
-    left: 1676px;
     padding: 10px 16px 10px 16px;
-    gap: 4px;
     border: none;
     font-size: 16px;
     font-weight: 500;
     line-height: 19.36px;
     text-align: left;
     background-color: #2B2D31;
-    color:#FFFFFF
+    color:#FFFFFF;
+    cursor: pointer
 }
 
 #fechar:hover {
-    width: 85px;
-    height: 56px;
-    top: 685px;
-    left: 1676px;
-    padding: 10px 16px 10px 16px;
-    gap: 4px;
     border-radius: 8px;
-    background: #444444;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 19.36px;
-    text-align: left;
-    cursor: pointer
+    background: #444444; 
 }
 
 #salvar {
     width: 164px;
     height: 56px;
-    top: 792px;
-    left: 441px;
     padding: 10px 16px 10px 16px;
-    gap: 4px;
     border-radius: 8px;
     background: #1D46CA;
     font-size: 16px;
@@ -225,11 +196,11 @@ body {
     text-align: center;
     color: #FFFFFF;
     border: none;
+    cursor: pointer;
 }
 
 #salvar:hover{
     background: #11276E;
-    cursor: pointer;
 }
 
 #buttons-style {
